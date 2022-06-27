@@ -1,0 +1,55 @@
+---
+swagger: '2.0'
+info:
+  title: Api Gateway
+  description: Api Gateway
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /pegarmarcas:
+    get:
+      summary: Greet a user
+      operationId: get
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/pegarmarcas
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /cadastrarmarca:
+    put:
+      summary: Greet a user
+      operationId: put
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/cadastrarmarca
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /alterarmarca:
+    post:
+      summary: Greet a user
+      operationId: post
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/alterarmarca
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /removermarca:
+    delete:
+      summary: Greet a user
+      operationId: delete
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/removermarca
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
